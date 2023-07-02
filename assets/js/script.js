@@ -10,16 +10,16 @@ $(document).ready(function () {
   workHours.forEach(function (hour) {
     // dynamically modified containers for the scheduler
     var timeBlock = $('<div>').addClass('row time-block').attr('data-hour', hour);
-    var timeLabel = $('<div>').addClass('col-2 col-md-1 hour text-center py-3');
+    var timeLabel = $('<div>').addClass('col-12 col-md-1 hour text-center py-3');
     var hourText = hour < 12 ? hour + 'AM' : (hour === 12 ? hour + 'PM' : (hour - 12) + 'PM'); // formats the hour text based on AM or PM
     timeLabel.text(hourText);
-    var entrySpace = $('<textarea>').addClass('col-8 col-md-9 description').attr('rows', '3');
-    var saveBtn = $('<button>').addClass('btn saveBtn col-2 col-md-1').attr('aria-label', 'save');
+    var entrySpace = $('<textarea>').addClass('col-12 col-md-9 description').attr('rows', '3');
+    var saveBtn = $('<button>').addClass('btn saveBtn col-12 col-md-1').attr('aria-label', 'save');
     var saveIcon = $('<i>').addClass('fas fa-save').attr('aria-hidden', 'true');
     saveBtn.append(saveIcon);
 
     //added a refresh button to clear text area and localStorage for each note
-    var refreshCache = $('<button>').addClass('btn saveBtn col-2 col-md-1').attr('aria-label', 'refresh');
+    var refreshCache = $('<button>').addClass('btn saveBtn col-12 col-md-1').attr('aria-label', 'refresh');
     var refreshIcon = $('<i>').addClass('fas fa-sync-alt').attr('aria-hidden', 'true');
     refreshCache.append(refreshIcon);
 
